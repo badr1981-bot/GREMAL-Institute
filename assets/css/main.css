@@ -2082,6 +2082,10 @@ input, select, textarea {
 				margin: 1em 0;
 			}
 
+#header {
+  position: relative;
+  z-index: 10002;
+}
 		/* Nav */
 
 			#page-wrapper {
@@ -2129,6 +2133,7 @@ input, select, textarea {
 					color: #fff;
 					line-height: 44px;
 					text-align: center;
+
 				}
 
 				#titleBar .toggle {
@@ -2280,14 +2285,12 @@ input, select, textarea {
 
 		/* Wrappers */
 
-			#header-wrapper {
-				display: none;
-			}
-
-			.homepage #header-wrapper {
-				display: block;
-				padding-top: 44px;
-			}
+			@media screen and (max-width: 980px) {
+	#header-wrapper {
+		display: block;
+		padding-top: 44px;
+	}
+}
 
 			#main-wrapper {
 				padding-top: 44px;
@@ -2439,4 +2442,64 @@ input, select, textarea {
 				padding: 3em 0 1em 0;
 			}
 
-	}
+/* Header desktop visible sauf sur mobile */
+#header {
+  display: block;
+}
+
+@media screen and (max-width: 980px) {
+  /* Cache le header desktop */
+  #header {
+    display: none !important;
+  }
+
+  /* Barre fixe en haut */
+  #titleBar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.9);
+    z-index: 10002;
+  }
+
+  /* Bouton toggle à gauche */
+  #titleBar .toggle {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 60px;
+    height: 44px;
+    opacity: 0.25;
+    z-index: 10003;
+  }
+
+  /* Logo centré */
+  #titleBar .title {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%);
+    height: 44px;
+    line-height: 44px;
+    font-weight: 800;
+    color: #000;
+    text-transform: uppercase;
+    font-size: 1.2em;
+    cursor: pointer;
+    z-index: 10002;
+    user-select: none;
+    text-align: center;
+    white-space: nowrap;
+  }
+}
+
+@media screen and (min-width: 981px) {
+  #header {
+    display: block !important;
+  }
+
+  #titleBar {
+    display: none !important;
+  }
+}

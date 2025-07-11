@@ -72,21 +72,45 @@
 
 			<!-- Header -->
 				<div id="header-wrapper">
+<div id="titleBar">
+  <a href="#navPanel" class="toggle"></a>
+  <a href="index.html" class="title">GREMAL Institute</a>
+</div>
+
+<!-- Panneau latéral menu mobile -->
+<nav id="navPanel">
+  <ul>
+    <li><a href="portfolio/index.html">Members</a></li>
+    <li><a href="jobs.html">Job Opportunities</a></li>
+    <li><a href="https://www.facebook.com/share/g/16Sr4UHnU9/">Forum</a></li>
+    <li><a href="joinus.html">Join US</a></li>
+    <li><a href="FAQ.html">FAQ</a></li>
+  </ul>
+</nav>
 					<div class="container">
 
 						<!-- Header -->
 							<header id="header">
 								<div class="inner">
 
-																			<!-- Logo -->
-										<h1><a href="index.html" id="logo">GREMAL Institute</a></h1>
+																		<!-- Logo -->
+										<h1><a href="index.html" id="logo">GREMAL INSTITUTE</a></h1>
 
 									<!-- Nav -->
 										<nav id="nav">
 											<ul>
-																																					</li>
+																								<li>
+													<a href="#">Who we are</a>
+													<ul>
+														<li><a href="Brochure.html">Brochure of GREMAL</a></li>
+																												<li><a href="mission-vision.html">Vision&Mission</a></li>
+															
+														
+														<li><a href="#">Partners</a></li>
+													</ul>
+												</li>
 												<li><a href="portfolio/index.html">Members</a></li>
-												<li><a href="right-sidebar.html">Job Opportunities</a></li>
+												<li><a href="jobs.html">Job Opportunities</a></li>
 <li><a href="https://www.facebook.com/share/g/16Sr4UHnU9/">Forum</a></li>
 <li><a href="joinus.html">Join US</a></li>
 												<li><a href="FAQ.html">FAQ</a></li>
@@ -95,6 +119,7 @@
 
 								</div>
 							</header>
+
 <!-- GREMAL Org Chart -->
 <section class="org-chart">
     <h1>GREMAL Organizational Chart</h1>
@@ -212,10 +237,24 @@ Addresses issues of representation, gender equity, Global South inclusion, and e
  </header>
 </section>
 
- <script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/jquery.dropotron.min.js"></script> <!-- IMPORTANT pour dropdown -->
 <script src="assets/js/browser.min.js"></script>
 <script src="assets/js/breakpoints.min.js"></script>
 <script src="assets/js/util.js"></script>
 <script src="assets/js/main.js"></script>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    var homeLinks = document.querySelectorAll('#logo, #titleBar .title');
+
+    homeLinks.forEach(function(link) {
+      link.addEventListener('click', function(e) {
+        // Pas de preventDefault() pour ne pas bloquer le menu déroulant
+        window.location.href = 'index.html';
+      });
+    });
+  });
+</script>
 </body>
 </html>

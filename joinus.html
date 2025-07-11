@@ -55,32 +55,50 @@
 
 		
 <body class="homepage is-preload">
+<div id="titleBar">
+  <a href="#navPanel" class="toggle"></a>
+  <a href="index.html" class="title">GREMAL Institute</a>
+</div>
 		<div id="page-wrapper">
 
 			<!-- Header -->
 				<div id="header-wrapper">
-					<div class="container">
+					    <!-- Header -->
+    <div id="header-wrapper">
+      <div class="container">
 
-						<!-- Header -->
+<!-- Header -->
 							<header id="header">
 								<div class="inner">
 
-									<!-- Logo -->
-										<h1><a href="index.html" id="logo">GREMAL Institute</a></h1>
+																		<!-- Logo -->
+										<h1><a href="index.html" id="logo">GREMAL INSTITUTE</a></h1>
 
 									<!-- Nav -->
-
 										<nav id="nav">
 											<ul>
-																					<li><a href="portfolio/index.html">Members</a></li>
+																								<li>
+													<a href="#">Who we are</a>
+													<ul>
+														<li><a href="Brochure.html">Brochure of GREMAL</a></li>
+														<li><a href="Gremal-Structure.html">Organizational Structure</a></li>
+														<li><a href="mission-vision.html">Vision&Mission</a></li>
+															
+														
+														<li><a href="#">Partners</a></li>
+													</ul>
+												</li>
+												<li><a href="portfolio/index.html">Members</a></li>
 												<li><a href="jobs.html">Job Opportunities</a></li>
 <li><a href="https://www.facebook.com/share/g/16Sr4UHnU9/">Forum</a></li>
 
-										<li><a href="FAQ.html">FAQ</a></li>		
+												<li><a href="FAQ.html">FAQ</a></li>
 											</ul>
 										</nav>
 
 								</div>
+							</header>
+
 
 			<!-- Main Content -->
 
@@ -120,7 +138,7 @@
 			</div>
 
 			
-<!-- Footer Wrapper -->
+			<!-- Footer Wrapper -->
 				<div id="footer-wrapper">
 					<footer id="footer" class="container">
 						<div class="row">
@@ -130,25 +148,26 @@
 									<section>
 										<h2>Other Research Areas</h2>
 										<ul class="divided">
-											<li><a href="#">Digital Sovereignty</a></li>
-											<li><a href="#">Marine Governance</a></li>
-											<li><a href="#">Algorithmic Law</a></li>
-											<li><a href="#">Technopolitical Transitions</a></li>
-											<li><a href="#">Institutional Futures</a></li>
+											<li>Digital Sovereignty</li>
+											<li>Marine Governance</li>
+											<li>Algorithmic Law</li>
+											<li>Technopolitical Transitions</li>
+											<li>Institutional Futures</li>
 																					</ul>
 									</section>
 
 							</div>
 							<div class="col-3 col-6-medium col-12-small">
 
-								<!-- Links -->
+						
+		<!-- Links -->
 									<section>
 										<h2>Get Involved</h2>
 										<ul class="divided">
-											<li><a href="#">Join the Network</a></li>
+											<li><a href="joinus.html">Join the Network</a></li>
 											<li><a href="#">Events & Workshops</a></li>
 											<li><a href="#">Call for Papers</a></li>
-											<li><a href="#">Partner with Us</a></li>
+											<li><a href="joinus.html">Partner with Us</a></li>
 										</ul>
 									</section>
 
@@ -156,10 +175,10 @@
 									<section>
 										<h2>Resources</h2>
 										<ul class="divided">
-											<li><a href="#">Publications</a></li>
-											<li><a href="#">Policy Briefs</a></li>
-											<li><a href="#">Media & Podcasts</a></li>
-											<li><a href="#">Newsletter</a></li>
+											<li>Publications</li>
+											<li>Policy Briefs</li>
+											<li>Media & Podcasts</li>
+											<li>Newsletter</li>
 										</ul>
 									</section>
 
@@ -185,17 +204,17 @@
 														<dt>Facebook</dt>
 														<dd><a href="#">facebook.com/untitled</a></dd>
 														<dt>WWW</dt>
-														<dd><a href="#">untitled.tld</a></dd>
+														<dd><a href="www.gremal-institute.org">www.gremal-institute.org</a></dd>
 														<dt>Email</dt>
-														<dd><a href="#">user@untitled.tld</a></dd>
+														<dd><a href="cantact@gremal-institute.org">cantact@graml-intitute.org</a></dd>
 													</dl>
 												</div>
 												<div class="col-6 col-12-small">
 													<dl class="contact">
 														<dt>Address</dt>
 														<dd>
-															1234 GREMAL<br />
-															Nashville, TN 00000-0000<br />
+															1234 GREMAL Insitute<br />
+	Delaware<br />
 															USA
 														</dd>
 														<dt>Phone</dt>
@@ -218,14 +237,26 @@
 				</div>
 
 		</div>
-
 		<!-- Scripts -->
 			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.dropotron.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+<script src="assets/js/jquery.dropotron.min.js"></script> <!-- IMPORTANT pour dropdown -->
+<script src="assets/js/browser.min.js"></script>
+<script src="assets/js/breakpoints.min.js"></script>
+<script src="assets/js/util.js"></script>
+<script src="assets/js/main.js"></script>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    var homeLinks = document.querySelectorAll('#logo, #titleBar .title');
+
+    homeLinks.forEach(function(link) {
+      link.addEventListener('click', function(e) {
+        // Pas de preventDefault() pour ne pas bloquer le menu déroulant
+        window.location.href = 'index.html';
+      });
+    });
+  });
+</script>
 
 
 	</body>
